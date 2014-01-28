@@ -17,3 +17,23 @@ filetype plugin indent on     " required!
 
 " Vim airline always
 set laststatus=2
+
+" Set colorscheme to solarized
+colorscheme solarized
+set background=dark
+
+" Highlight search results
+set hlsearch
+
+" Highlight syntax
+syntax enable
+
+" Color scheme is solarized with a dark background
+colorscheme solarized
+set background=dark
+
+set expandtab
+set smarttab
+set shiftwidth=2 " Number of spaces used in auto-indentation.
+set tabstop=2 " A tab is equal to 2 spaces. Coding practice for ruby.
+
