@@ -11,7 +11,10 @@ Bundle 'gmarik/vundle'
 " My bundles here:
 Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
- 
+Bundle 'bling/vim-bufferline' 
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-bundler'
+Bundle 'gregsexton/MatchTag'
 
 filetype plugin indent on     " required!
 
@@ -37,3 +40,4 @@ set smarttab
 set shiftwidth=2 " Number of spaces used in auto-indentation.
 set tabstop=2 " A tab is equal to 2 spaces. Coding practice for ruby.
 
+set smartindent
