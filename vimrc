@@ -15,6 +15,18 @@ Bundle 'bling/vim-bufferline'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-bundler'
 Bundle 'gregsexton/MatchTag'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-markdown'
+
+" Vim snippets
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+
+
+" Bootstrap snippets
+
+Bundle 'bonsaiben/bootstrap-snippets'
 
 filetype plugin indent on     " required!
 
