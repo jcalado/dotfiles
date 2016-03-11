@@ -1,34 +1,51 @@
 set nocompatible              " be iMproved
 filetype off                  " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
 
 " My bundles here:
-Bundle 'kien/ctrlp.vim'
-Bundle 'bling/vim-airline'
-Bundle 'bling/vim-bufferline' 
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-bundler'
-Bundle 'gregsexton/MatchTag'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-markdown'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-bundler'
+Plug 'gregsexton/MatchTag'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-markdown'
+Plug 'slim-template/vim-slim.git'
 
 " Vim snippets
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "closetag.vim"
-
-" Bootstrap snippets
-Bundle 'bonsaiben/bootstrap-snippets'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'closetag.vim'
 
 " Vim tabular
-Bundle 'godlygeek/tabular'
+Plug 'godlygeek/tabular'
+
+" Markdown
+Plug 'plasticboy/vim-markdown'
+let g:vim_markdown_folding_disabled = 1
+
+Plug 'slim-template/vim-slim'
+
+Plug 'vim-airline/vim-airline'
+Plug 'bling/vim-bufferline'
+
+" Comment blocks
+Plug 'tomtom/tcomment_vim'
+
+" Manage ( [ ' "
+Plug 'tpope/vim-surround'
+
+" Jump to matching HTML tag.
+Plug 'vim-scripts/matchit.zip'
+
+" filetypes
+Plug 'kchmck/vim-coffee-script'
+Plug 'ekalinin/Dockerfile.vim'
+
+" Add plugins to &runtimepath
+call plug#end()
 
 filetype plugin indent on     " required!
 
@@ -36,18 +53,16 @@ filetype plugin indent on     " required!
 set laststatus=2
 
 " Set colorscheme to solarized
-colorscheme solarized
-set background=dark
+colorscheme Tomorrow-Night
 
 " Highlight search results
 set hlsearch
 
 " Highlight syntax
-syntax enable
+syntax on
 
-" Color scheme is solarized with a dark background
-colorscheme solarized
-set background=dark
+set number
+set relativenumber
 
 set expandtab
 set smarttab
@@ -55,3 +70,7 @@ set shiftwidth=2 " Number of spaces used in auto-indentation.
 set tabstop=2 " A tab is equal to 2 spaces. Coding practice for ruby.
 
 set smartindent
+
+let html_no_rendering=1
+
+set clipboard=unnamed
