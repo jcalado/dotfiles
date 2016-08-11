@@ -10,7 +10,6 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
 Plug 'gregsexton/MatchTag'
 Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-markdown'
 Plug 'slim-template/vim-slim.git'
 
 " Vim snippets
@@ -25,10 +24,12 @@ Plug 'godlygeek/tabular'
 " Markdown
 Plug 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_frontmatter = 1
 
 Plug 'slim-template/vim-slim'
 
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-bufferline'
 
 " Comment blocks
@@ -52,14 +53,19 @@ filetype plugin indent on     " required!
 " Vim airline always
 set laststatus=2
 
-" Set colorscheme to solarized
-colorscheme Tomorrow-Night
+" Highlight syntax
+syntax on
+
+" Set colorscheme to wwdc_2016
+colorscheme wwdc_2016
+hi Normal ctermbg=none
+hi LineNr ctermfg=grey
+" Set vim-airline theme
+let g:airline_theme='base16_default'
 
 " Highlight search results
 set hlsearch
 
-" Highlight syntax
-syntax on
 
 set number
 set relativenumber
@@ -69,8 +75,11 @@ set smarttab
 set shiftwidth=2 " Number of spaces used in auto-indentation.
 set tabstop=2 " A tab is equal to 2 spaces. Coding practice for ruby.
 
+set autoindent
 set smartindent
 
 let html_no_rendering=1
-
 set clipboard=unnamed
+
+" Highlight current line
+set cursorline 
