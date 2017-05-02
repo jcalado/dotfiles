@@ -1,11 +1,12 @@
 set nocompatible              " be iMproved
 filetype off                  " required!
+set rtp+=/usr/local/opt/fzf
 
 call plug#begin('~/.vim/plugged')
 
 
 " My bundles here:
-Plug 'kien/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
 Plug 'gregsexton/MatchTag'
@@ -17,6 +18,9 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'closetag.vim'
+
+" Vim syntax check
+" Plug 'scrooloose/syntastic'
 
 " Vim tabular
 Plug 'godlygeek/tabular'
@@ -44,6 +48,19 @@ Plug 'vim-scripts/matchit.zip'
 " filetypes
 Plug 'kchmck/vim-coffee-script'
 Plug 'ekalinin/Dockerfile.vim'
+Plug 'chrisbra/csv.vim'
+
+" Autocompletion
+Plug 'ervandew/supertab'
+
+" Comments
+Plug 'tpope/vim-commentary'
+
+" YAML
+Plug 'lmeijvogel/vim-yaml-helper'
+
+" Easy align
+Plug 'junegunn/vim-easy-align'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -57,7 +74,7 @@ set laststatus=2
 syntax on
 
 " Set colorscheme to wwdc_2016
-colorscheme wwdc_2016
+colorscheme wwdc16
 hi Normal ctermbg=none
 hi LineNr ctermfg=grey
 " Set vim-airline theme
@@ -83,3 +100,25 @@ set clipboard=unnamed
 
 " Highlight current line
 set cursorline 
+
+" Undo
+set undolevels=999999
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_ruby_checkers = ['rubocop']
+
+" Control p 
+nnoremap <silent> <C-P> :FZF<CR>
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
