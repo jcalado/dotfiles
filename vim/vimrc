@@ -17,7 +17,7 @@ Plug 'slim-template/vim-slim.git'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
-Plug 'vim-scripts/closetag.vim'
+Plug 'closetag.vim'
 
 " Vim syntax check
 " Plug 'scrooloose/syntastic'
@@ -74,7 +74,6 @@ set laststatus=2
 syntax on
 
 " Set colorscheme to wwdc_2016
-let g:wwdc16_term_trans_bg = 1
 colorscheme wwdc16
 hi Normal ctermbg=none
 hi LineNr ctermfg=grey
