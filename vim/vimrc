@@ -13,11 +13,13 @@ Plug 'gregsexton/MatchTag'
 Plug 'vim-ruby/vim-ruby'
 Plug 'slim-template/vim-slim.git'
 
+Plug 'dracula/vim', { 'as': 'dracula' }
+
 " Vim snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
-Plug 'closetag.vim'
+Plug 'alvan/vim-closetag'
 
 " Vim syntax check
 " Plug 'scrooloose/syntastic'
@@ -73,8 +75,8 @@ set laststatus=2
 " Highlight syntax
 syntax on
 
-" Set colorscheme to wwdc_2016
-colorscheme wwdc16
+" Set colorscheme
+color dracula
 hi Normal ctermbg=none
 hi LineNr ctermfg=grey
 " Set vim-airline theme
