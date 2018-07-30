@@ -16,7 +16,6 @@ Plug 'slim-template/vim-slim.git'
 " Vim snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
 Plug 'alvan/vim-closetag'
 
 Plug 'kaicataldo/material.vim'
@@ -79,7 +78,6 @@ hi LineNr ctermfg=grey
 " Highlight search results
 set hlsearch
 
-
 set number
 set relativenumber
 
@@ -99,16 +97,6 @@ set cursorline
 
 " Undo
 set undolevels=999999
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_ruby_checkers = ['rubocop']
 
 " Control p 
 nnoremap <silent> <C-P> :FZF<CR>
