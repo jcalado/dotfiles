@@ -13,16 +13,15 @@ Plug 'gregsexton/MatchTag'
 Plug 'vim-ruby/vim-ruby'
 Plug 'slim-template/vim-slim.git'
 
-Plug 'dracula/vim', { 'as': 'dracula' }
-
 " Vim snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'alvan/vim-closetag'
 
-" Vim syntax check
-" Plug 'scrooloose/syntastic'
+Plug 'kaicataldo/material.vim'
+Plug 'itchyny/lightline.vim'
+let g:lightline = { 'colorscheme': 'material_vim' }
 
 " Vim tabular
 Plug 'godlygeek/tabular'
@@ -33,10 +32,6 @@ let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_frontmatter = 1
 
 Plug 'slim-template/vim-slim'
-
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'bling/vim-bufferline'
 
 " Comment blocks
 Plug 'tomtom/tcomment_vim'
@@ -76,11 +71,10 @@ set laststatus=2
 syntax on
 
 " Set colorscheme
-color dracula
+set background=dark
+colorscheme material
 hi Normal ctermbg=none
 hi LineNr ctermfg=grey
-" Set vim-airline theme
-let g:airline_theme='base16_default'
 
 " Highlight search results
 set hlsearch
